@@ -1,0 +1,23 @@
+# -------- Python --------
+venv/
+venv310/
+__pycache__/
+*.pyc
+instance/
+.env
+
+# -------- Node / React --------
+node_modules/
+dist/
+build/
+
+# -------- OS --------
+.DS_Store
+Thumbs.db
+
+# -------- IDE --------
+.vscode/
+.idea/
+
+# -------- Logs --------
+*.log
