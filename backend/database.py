@@ -1,14 +1,17 @@
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 db = SQLAlchemy()
 
 def init_db(app):
-    # OPTION 1: SQLite (Currently Active - Comment this out to stop using it)
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///heart_disease.db'
-    
-    # OPTION 2: MySQL (Uncomment and fill in your details to use MySQL)
-    # Format: mysql+pymysql://USERNAME:PASSWORD@localhost/DATABASE_NAME
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:SUS77%23ta@localhost/tableau_project'
-    
+    # ✅ Get Railway DB URL from Render Environment Variables
+    db_url = os.getenv("DATABASE_URL")
+
+    # Railway gives mysql:// but SQLAlchemy needs mysql+pymysql://
+    if db_url and db_url.startswith("mysql://"):
+        db_url = db_url.replace("mysql://", "mysql+pymysql://", 1)
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = db_url
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     db.init_app(app)
