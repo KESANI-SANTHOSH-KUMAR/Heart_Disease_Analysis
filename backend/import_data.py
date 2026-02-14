@@ -1,6 +1,3 @@
-
-# import_data.py (ULTRA FAST VERSION)
-
 import os
 from dotenv import load_dotenv
 load_dotenv()   # Loads DATABASE_URL from .env
