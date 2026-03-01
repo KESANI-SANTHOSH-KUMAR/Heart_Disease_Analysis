@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero-left">
+        <h1>Heart Disease Analysis</h1>
+        <a href="/about" class="hero-btn">Get Started →</a>
+    </div>
+
+    <div class="hero-right">
+        <img src="{{ url_for('static', filename='one.jpeg') }}">
+    </div>
+</section>
+
+{% endblock %}

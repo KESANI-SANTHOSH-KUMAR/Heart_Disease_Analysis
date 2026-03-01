@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="about-section">
+    <div class="about-text">
+        <h2>Medical Definition</h2>
+        <p>
+            Heart disease is a group of cardiovascular conditions involving functional violations
+            of the heart. It may be caused by damage to the epicardium, myocardium,
+            endocardium or heart vessels.
+        </p>
+
+        <h3>Risk Factor Analysis</h3>
+        <p>
+            According to the National Heart, Lung and Blood Institute,
+            the most important development factors are obesity,
+            sedentary lifestyle and smoking.
+        </p>
+
+        <a href="/dashboard" class="hero-btn">Get Started →</a>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='about.png') }}">
+    </div>
+</section>
+
+{% endblock %}
