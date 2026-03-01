@@ -19,6 +19,16 @@ This project focuses on:
 - 🌐 Full-Stack Web Integration  
 
 ---
+## 🎥 Project Demonstration:
+<a href="https://drive.google.com/file/d/1ful7lDSPYaR6L9bt8dYhy8xsdKVVMRRx/view?usp=sharing" target="_blank">
+Watch Demo Video
+</a>
+<br/>
+
+## 🚀 Deployment:
+<a href="https://heart-disease-analysis-atvq.onrender.com" target="_blank">
+Open Live Application
+</a>
 
 # 🌍 Project Overview
 
